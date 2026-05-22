@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+header {
+    background: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: red;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px;
+    background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') no-repeat center/cover;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    padding: 40px;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.trainer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.trainer-card {
+    background: #222;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.trainer-card:hover {
+    transform: scale(1.05);
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.trainer-card button {
+    margin-top: 10px;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
