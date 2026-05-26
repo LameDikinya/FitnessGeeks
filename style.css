@@ -1,12 +1,13 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #111;
+    background-color: #111;
     color: white;
 }
 
+/* HEADER */
 header {
-    background: black;
+    background-color: black;
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -15,92 +16,98 @@ header {
 
 nav a {
     color: white;
-    margin: 10px;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 nav a:hover {
     color: red;
 }
 
+/* HERO / BANNER */
+.banner,
 .hero {
     text-align: center;
-    padding: 100px;
-    background: url('pic1.jpg') no-repeat center/cover;
+    padding: 100px 20px;
+    background: url('pic1.jpg') no-repeat center center/cover;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: red;
+/* BUTTONS */
+.btn,
+button {
+    background-color: red;
     color: white;
+    padding: 10px 20px;
+    border: none;
     text-decoration: none;
+    cursor: pointer;
 }
 
+/* CONTENT */
 .content {
     padding: 40px;
 }
 
-.card {
-    background: #222;
-    padding: 20px;
-    margin: 10px 0;
-}
-
+/* FORMS */
 form {
     display: flex;
     flex-direction: column;
 }
 
-input, textarea {
+input,
+textarea {
+    padding: 10px;
     margin: 10px 0;
-    padding: 10px;
 }
 
-button {
-    padding: 10px;
-    background: red;
+/* TRAINER CARDS */
+.trainer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #222 !important;
+    color: white !important;
+    width: 18rem;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title,
+.card-text {
     color: white;
-    border: none;
 }
 
-/* RESPONSIVE */
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: black;
+}
+
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
     }
-}
-.trainer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
 
-.trainer-card {
-    background: #222;
-    padding: 15px;
-    text-align: center;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.trainer-card:hover {
-    transform: scale(1.05);
-}
-
-.trainer-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.trainer-card button {
-    margin-top: 10px;
-    padding: 10px;
-    background: red;
-    color: white;
-    border: none;
-    cursor: pointer;
+    .trainer-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
